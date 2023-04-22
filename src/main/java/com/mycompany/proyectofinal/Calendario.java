@@ -20,7 +20,7 @@ public class Calendario {
         this.anyoCalendario = anyoCalendario;
     }
 
-    Calendario() {
+    Calendario() { //CONSTRUCTOR VACIO
         
     }
    
