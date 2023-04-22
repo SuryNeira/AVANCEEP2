@@ -115,7 +115,7 @@ public class Usuario {
     
     
 
-    //comportamientos
+    //comportamientoS
     
     public void CrearUsuario(){
         
