@@ -24,7 +24,7 @@ public class Principal {
     
     public static void InsertarDatosArchivos () throws FileNotFoundException {
         
-        String file = "src/test/java/estudiantes.txt";
+        String file = "src/test/java/estudiantes.csv";
         int i=0;
         
         try{
@@ -34,7 +34,7 @@ public class Principal {
          Scanner scanner = new Scanner(archivo);
          
          while (scanner.hasNext()) {
-                  String []datos=scanner.next().split(";");
+                  String []datos=scanner.next().split(",");
                   System.out.print("Linea "+i + " Titulo:"+datos[0]);
                   System.out.print(" Numero:"+datos[1]);
                   System.out.print(" Descripcion:"+datos[2]);
