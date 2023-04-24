@@ -2,12 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
 
+
 package com.mycompany.proyectofinal;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
@@ -24,7 +26,7 @@ public class Principal {
     
     public static void InsertarDatosArchivos () throws FileNotFoundException {
         
-        String file = "src/test/java/estudiantes.csv";
+        String file = "src/test/java/estudiantes.txt";
         int i=0;
         
         try{
@@ -34,7 +36,7 @@ public class Principal {
          Scanner scanner = new Scanner(archivo);
          
          while (scanner.hasNext()) {
-                  String []datos=scanner.next().split(",");
+                  String []datos=scanner.next().split(";");
                   System.out.print("Linea "+i + " Titulo:"+datos[0]);
                   System.out.print(" Numero:"+datos[1]);
                   System.out.print(" Descripcion:"+datos[2]);
@@ -112,7 +114,23 @@ public class Principal {
           calendario.setAnyoCalendario(2023);
           calendario.setIdCalendario(1);
           
-          
+          //menu
+          int opc = 0;
+          switch (opc){
+            case 1: //modifica admin
+                    calendario.agregarDia(dia);
+                    break;
+                case 2: //modifica a algun empleado
+                    calendario.modifCalendario(new ArrayList<Dia>(), tamanyo);
+                    break;
+                case 3:
+                    calendario.eliminarDia(dia);
+                    break;
+                case 4:
+                    calendario.mostrarCalendario();
+                    break;
+            }
+          default:break;
           
     
 }
